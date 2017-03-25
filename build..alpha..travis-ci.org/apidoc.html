@@ -1,0 +1,1157 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api-documentation for
+    <a
+
+        href="https://github.com/mhart/aws4#readme"
+
+    >aws4 (v1.6.0)</a>
+</h1>
+<h4>Signs and prepares requests using AWS Signature Version 4</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aws4">module aws4</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner">
+            function <span class="apidocSignatureSpan">aws4.</span>RequestSigner
+            <span class="apidocSignatureSpan">(request, credentials)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.sign">
+            function <span class="apidocSignatureSpan">aws4.</span>sign
+            <span class="apidocSignatureSpan">(request, credentials)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">aws4.</span>RequestSigner.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aws4.RequestSigner">module aws4.RequestSigner</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.RequestSigner">
+            function <span class="apidocSignatureSpan">aws4.</span>RequestSigner
+            <span class="apidocSignatureSpan">(request, credentials)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.aws4.RequestSigner.prototype">module aws4.RequestSigner.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.authHeader">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>authHeader
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.canonicalHeaders">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>canonicalHeaders
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.canonicalString">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>canonicalString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.createHost">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>createHost
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.credentialString">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>credentialString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.defaultCredentials">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>defaultCredentials
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.formatPath">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>formatPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.getDate">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>getDate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.getDateTime">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>getDateTime
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.isSingleRegion">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>isSingleRegion
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.matchHost">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>matchHost
+            <span class="apidocSignatureSpan">(host)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.parsePath">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>parsePath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.prepareRequest">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>prepareRequest
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.sign">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>sign
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.signature">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>signature
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.signedHeaders">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>signedHeaders
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.aws4.RequestSigner.prototype.stringToSign">
+            function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>stringToSign
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aws4" id="apidoc.module.aws4">module aws4</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner" id="apidoc.element.aws4.RequestSigner">
+        function <span class="apidocSignatureSpan">aws4.</span>RequestSigner
+        <span class="apidocSignatureSpan">(request, credentials)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RequestSigner(request, credentials) {
+
+  if (typeof request === &#x27;string&#x27;) request = url.parse(request)
+
+  var headers = request.headers = (request.headers || {}),
+      hostParts = this.matchHost(request.hostname || request.host || headers.Host || headers.host)
+
+  this.request = request
+  this.credentials = credentials || this.defaultCredentials()
+
+  this.service = request.service || hostParts[0] || &#x27;&#x27;
+  this.region = request.region || hostParts[1] || &#x27;us-east-1&#x27;
+
+  // SES uses a different domain from the service name
+  if (this.service === &#x27;email&#x27;) this.service = &#x27;ses&#x27;
+
+  if (!request.method &#x26;&#x26; request.body)
+    request.method = &#x27;POST&#x27;
+
+  if (!headers.Host &#x26;&#x26; !headers.host) {
+    headers.Host = request.hostname || request.host || this.createHost()
+
+    // If a port is specified explicitly, use it as is
+    if (request.port)
+      headers.Host += &#x27;:&#x27; + request.port
+  }
+  if (!request.hostname &#x26;&#x26; !request.host)
+    request.hostname = headers.Host || headers.host
+
+  this.isCodeCommitGit = this.service === &#x27;codecommit&#x27; &#x26;&#x26; request.method === &#x27;GIT&#x27;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+}))
+/*
+(HTTP 202, empty response)
+*/
+
+// Generate CodeCommit Git access password
+var signer = new aws4.<span class="apidocCodeKeywordSpan">RequestSigner</span>({
+  service: &#x27;codecommit&#x27;,
+  host: &#x27;git-codecommit.us-east-1.amazonaws.com&#x27;,
+  method: &#x27;GIT&#x27;,
+  path: &#x27;/v1/repos/MyAwesomeRepo&#x27;,
+})
+var password = signer.getDateTime() + &#x27;Z&#x27; + signer.signature()
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.sign" id="apidoc.element.aws4.sign">
+        function <span class="apidocSignatureSpan">aws4.</span>sign
+        <span class="apidocSignatureSpan">(request, credentials)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sign = function (request, credentials) {
+  return new RequestSigner(request, credentials).sign()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// alternatively (as aws4 can infer the host):
+opts = {service: &#x27;sqs&#x27;, region: &#x27;us-east-1&#x27;, path: &#x27;/?Action=ListQueues&#x27;}
+
+// alternatively (as us-east-1 is default):
+opts = {service: &#x27;sqs&#x27;, path: &#x27;/?Action=ListQueues&#x27;}
+
+aws4.<span class="apidocCodeKeywordSpan">sign</span>(opts) // assumes AWS credentials are available in process.env
+
+console.log(opts)
+/*
+{
+host: &#x27;sqs.us-east-1.amazonaws.com&#x27;,
+path: &#x27;/?Action=ListQueues&#x27;,
+headers: {
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aws4.RequestSigner" id="apidoc.module.aws4.RequestSigner">module aws4.RequestSigner</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.RequestSigner" id="apidoc.element.aws4.RequestSigner.RequestSigner">
+        function <span class="apidocSignatureSpan">aws4.</span>RequestSigner
+        <span class="apidocSignatureSpan">(request, credentials)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RequestSigner(request, credentials) {
+
+  if (typeof request === &#x27;string&#x27;) request = url.parse(request)
+
+  var headers = request.headers = (request.headers || {}),
+      hostParts = this.matchHost(request.hostname || request.host || headers.Host || headers.host)
+
+  this.request = request
+  this.credentials = credentials || this.defaultCredentials()
+
+  this.service = request.service || hostParts[0] || &#x27;&#x27;
+  this.region = request.region || hostParts[1] || &#x27;us-east-1&#x27;
+
+  // SES uses a different domain from the service name
+  if (this.service === &#x27;email&#x27;) this.service = &#x27;ses&#x27;
+
+  if (!request.method &#x26;&#x26; request.body)
+    request.method = &#x27;POST&#x27;
+
+  if (!headers.Host &#x26;&#x26; !headers.host) {
+    headers.Host = request.hostname || request.host || this.createHost()
+
+    // If a port is specified explicitly, use it as is
+    if (request.port)
+      headers.Host += &#x27;:&#x27; + request.port
+  }
+  if (!request.hostname &#x26;&#x26; !request.host)
+    request.hostname = headers.Host || headers.host
+
+  this.isCodeCommitGit = this.service === &#x27;codecommit&#x27; &#x26;&#x26; request.method === &#x27;GIT&#x27;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+}))
+/*
+(HTTP 202, empty response)
+*/
+
+// Generate CodeCommit Git access password
+var signer = new aws4.<span class="apidocCodeKeywordSpan">RequestSigner</span>({
+  service: &#x27;codecommit&#x27;,
+  host: &#x27;git-codecommit.us-east-1.amazonaws.com&#x27;,
+  method: &#x27;GIT&#x27;,
+  path: &#x27;/v1/repos/MyAwesomeRepo&#x27;,
+})
+var password = signer.getDateTime() + &#x27;Z&#x27; + signer.signature()
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.aws4.RequestSigner.prototype" id="apidoc.module.aws4.RequestSigner.prototype">module aws4.RequestSigner.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.authHeader" id="apidoc.element.aws4.RequestSigner.prototype.authHeader">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>authHeader
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authHeader = function () {
+  return [
+    &#x27;AWS4-HMAC-SHA256 Credential=&#x27; + this.credentials.accessKeyId + &#x27;/&#x27; + this.credentialString(),
+    &#x27;SignedHeaders=&#x27; + this.signedHeaders(),
+    &#x27;Signature=&#x27; + this.signature(),
+  ].join(&#x27;, &#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+RequestSigner.prototype.sign = function() {
+  if (!this.parsedPath) this.prepareRequest()
+
+  if (this.request.signQuery) {
+    this.parsedPath.query[&#x27;X-Amz-Signature&#x27;] = this.signature()
+  } else {
+    this.request.headers.Authorization = this.<span class="apidocCodeKeywordSpan">authHeader</span>()
+  }
+
+  this.request.path = this.formatPath()
+
+  return this.request
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.canonicalHeaders" id="apidoc.element.aws4.RequestSigner.prototype.canonicalHeaders">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>canonicalHeaders
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">canonicalHeaders = function () {
+  var headers = this.request.headers
+  function trimAll(header) {
+    return header.toString().trim().replace(/\s+/g, &#x27; &#x27;)
+  }
+  return Object.keys(headers)
+    .sort(function(a, b) { return a.toLowerCase() &#x3c; b.toLowerCase() ? -1 : 1 })
+    .map(function(key) { return key.toLowerCase() + &#x27;:&#x27; + trimAll(headers[key]) })
+    .join(&#x27;\n&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if (decodeSlashesInPath) pathStr = pathStr.replace(/%2F/g, &#x27;/&#x27;)
+}
+
+return [
+  this.request.method || &#x27;GET&#x27;,
+  pathStr,
+  queryStr,
+  this.<span class="apidocCodeKeywordSpan">canonicalHeaders</span>() + &#x27;\n&#x27;,
+  this.signedHeaders(),
+  bodyHash,
+].join(&#x27;\n&#x27;)
+}
+
+RequestSigner.prototype.canonicalHeaders = function() {
+var headers = this.request.headers
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.canonicalString" id="apidoc.element.aws4.RequestSigner.prototype.canonicalString">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>canonicalString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">canonicalString = function () {
+  if (!this.parsedPath) this.prepareRequest()
+
+  var pathStr = this.parsedPath.path,
+      query = this.parsedPath.query,
+      headers = this.request.headers,
+      queryStr = &#x27;&#x27;,
+      normalizePath = this.service !== &#x27;s3&#x27;,
+      decodePath = this.service === &#x27;s3&#x27; || this.request.doNotEncodePath,
+      decodeSlashesInPath = this.service === &#x27;s3&#x27;,
+      firstValOnly = this.service === &#x27;s3&#x27;,
+      bodyHash
+
+  if (this.service === &#x27;s3&#x27; &#x26;&#x26; this.request.signQuery) {
+    bodyHash = &#x27;UNSIGNED-PAYLOAD&#x27;
+  } else if (this.isCodeCommitGit) {
+    bodyHash = &#x27;&#x27;
+  } else {
+    bodyHash = headers[&#x27;X-Amz-Content-Sha256&#x27;] || headers[&#x27;x-amz-content-sha256&#x27;] ||
+      hash(this.request.body || &#x27;&#x27;, &#x27;hex&#x27;)
+  }
+
+  if (query) {
+    queryStr = encodeRfc3986(querystring.stringify(Object.keys(query).sort().reduce(function(obj, key) {
+      if (!key) return obj
+      obj[key] = !Array.isArray(query[key]) ? query[key] :
+        (firstValOnly ? query[key][0] : query[key].slice().sort())
+      return obj
+    }, {})))
+  }
+  if (pathStr !== &#x27;/&#x27;) {
+    if (normalizePath) pathStr = pathStr.replace(/\/{2,}/g, &#x27;/&#x27;)
+    pathStr = pathStr.split(&#x27;/&#x27;).reduce(function(path, piece) {
+      if (normalizePath &#x26;&#x26; piece === &#x27;..&#x27;) {
+        path.pop()
+      } else if (!normalizePath || piece !== &#x27;.&#x27;) {
+        if (decodePath) piece = querystring.unescape(piece)
+        path.push(encodeRfc3986(querystring.escape(piece)))
+      }
+      return path
+    }, []).join(&#x27;/&#x27;)
+    if (pathStr[0] !== &#x27;/&#x27;) pathStr = &#x27;/&#x27; + pathStr
+    if (decodeSlashesInPath) pathStr = pathStr.replace(/%2F/g, &#x27;/&#x27;)
+  }
+
+  return [
+    this.request.method || &#x27;GET&#x27;,
+    pathStr,
+    queryStr,
+    this.canonicalHeaders() + &#x27;\n&#x27;,
+    this.signedHeaders(),
+    bodyHash,
+  ].join(&#x27;\n&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+RequestSigner.prototype.stringToSign = function() {
+return [
+  &#x27;AWS4-HMAC-SHA256&#x27;,
+  this.getDateTime(),
+  this.credentialString(),
+  hash(this.<span class="apidocCodeKeywordSpan">canonicalString</span>(), &#x27;hex&#x27;),
+].join(&#x27;\n&#x27;)
+}
+
+RequestSigner.prototype.canonicalString = function() {
+if (!this.parsedPath) this.prepareRequest()
+
+var pathStr = this.parsedPath.path,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.createHost" id="apidoc.element.aws4.RequestSigner.prototype.createHost">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>createHost
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createHost = function () {
+  var region = this.isSingleRegion() ? &#x27;&#x27; :
+        (this.service === &#x27;s3&#x27; &#x26;&#x26; this.region !== &#x27;us-east-1&#x27; ? &#x27;-&#x27; : &#x27;.&#x27;) + this.region,
+      service = this.service === &#x27;ses&#x27; ? &#x27;email&#x27; : this.service
+  return service + region + &#x27;.amazonaws.com&#x27;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// SES uses a different domain from the service name
+if (this.service === &#x27;email&#x27;) this.service = &#x27;ses&#x27;
+
+if (!request.method &#x26;&#x26; request.body)
+  request.method = &#x27;POST&#x27;
+
+if (!headers.Host &#x26;&#x26; !headers.host) {
+  headers.Host = request.hostname || request.host || this.<span class="apidocCodeKeywordSpan">createHost</span>()
+
+  // If a port is specified explicitly, use it as is
+  if (request.port)
+    headers.Host += &#x27;:&#x27; + request.port
+}
+if (!request.hostname &#x26;&#x26; !request.host)
+  request.hostname = headers.Host || headers.host
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.credentialString" id="apidoc.element.aws4.RequestSigner.prototype.credentialString">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>credentialString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">credentialString = function () {
+  return [
+    this.getDate(),
+    this.region,
+    this.service,
+    &#x27;aws4_request&#x27;,
+  ].join(&#x27;/&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (query[&#x27;X-Amz-Date&#x27;])
+  this.datetime = query[&#x27;X-Amz-Date&#x27;]
+else
+  query[&#x27;X-Amz-Date&#x27;] = this.getDateTime()
+
+query[&#x27;X-Amz-Algorithm&#x27;] = &#x27;AWS4-HMAC-SHA256&#x27;
+query[&#x27;X-Amz-Credential&#x27;] = this.credentials.accessKeyId + &#x27;/&#x27; + this.<span class="apidocCodeKeywordSpan">credentialString
+</span>()
+query[&#x27;X-Amz-SignedHeaders&#x27;] = this.signedHeaders()
+
+  } else {
+
+if (!request.doNotModifyHeaders &#x26;&#x26; !this.isCodeCommitGit) {
+  if (request.body &#x26;&#x26; !headers[&#x27;Content-Type&#x27;] &#x26;&#x26; !headers[&#x27;content-type&#x27;])
+    headers[&#x27;Content-Type&#x27;] = &#x27;application/x-www-form-urlencoded; charset=utf-8&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.defaultCredentials" id="apidoc.element.aws4.RequestSigner.prototype.defaultCredentials">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>defaultCredentials
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">defaultCredentials = function () {
+  var env = process.env
+  return {
+    accessKeyId: env.AWS_ACCESS_KEY_ID || env.AWS_ACCESS_KEY,
+    secretAccessKey: env.AWS_SECRET_ACCESS_KEY || env.AWS_SECRET_KEY,
+    sessionToken: env.AWS_SESSION_TOKEN,
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (typeof request === &#x27;string&#x27;) request = url.parse(request)
+
+var headers = request.headers = (request.headers || {}),
+    hostParts = this.matchHost(request.hostname || request.host || headers.Host || headers.host)
+
+this.request = request
+this.credentials = credentials || this.<span class="apidocCodeKeywordSpan">defaultCredentials</span>()
+
+this.service = request.service || hostParts[0] || &#x27;&#x27;
+this.region = request.region || hostParts[1] || &#x27;us-east-1&#x27;
+
+// SES uses a different domain from the service name
+if (this.service === &#x27;email&#x27;) this.service = &#x27;ses&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.formatPath" id="apidoc.element.aws4.RequestSigner.prototype.formatPath">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>formatPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">formatPath = function () {
+  var path = this.parsedPath.path,
+      query = this.parsedPath.query
+
+  if (!query) return path
+
+  // Services don&#x27;t support empty query string keys
+  if (query[&#x27;&#x27;] != null) delete query[&#x27;&#x27;]
+
+  return path + &#x27;?&#x27; + encodeRfc3986(querystring.stringify(query))
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+if (this.request.signQuery) {
+  this.parsedPath.query[&#x27;X-Amz-Signature&#x27;] = this.signature()
+} else {
+  this.request.headers.Authorization = this.authHeader()
+}
+
+this.request.path = this.<span class="apidocCodeKeywordSpan">formatPath</span>()
+
+return this.request
+}
+
+RequestSigner.prototype.getDateTime = function() {
+if (!this.datetime) {
+  var headers = this.request.headers,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.getDate" id="apidoc.element.aws4.RequestSigner.prototype.getDate">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>getDate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDate = function () {
+  return this.getDateTime().substr(0, 8)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  &#x27;AWS4-HMAC-SHA256 Credential=&#x27; + this.credentials.accessKeyId + &#x27;/&#x27; + this.credentialString(),
+  &#x27;SignedHeaders=&#x27; + this.signedHeaders(),
+  &#x27;Signature=&#x27; + this.signature(),
+].join(&#x27;, &#x27;)
+}
+
+RequestSigner.prototype.signature = function() {
+var date = this.<span class="apidocCodeKeywordSpan">getDate</span>(),
+    cacheKey = [this.credentials.secretAccessKey, date, this.region, this.service].join(),
+    kDate, kRegion, kService, kCredentials = credentialsCache.get(cacheKey)
+if (!kCredentials) {
+  kDate = hmac(&#x27;AWS4&#x27; + this.credentials.secretAccessKey, date)
+  kRegion = hmac(kDate, this.region)
+  kService = hmac(kRegion, this.service)
+  kCredentials = hmac(kService, &#x27;aws4_request&#x27;)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.getDateTime" id="apidoc.element.aws4.RequestSigner.prototype.getDateTime">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>getDateTime
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDateTime = function () {
+  if (!this.datetime) {
+    var headers = this.request.headers,
+      date = new Date(headers.Date || headers.date || new Date)
+
+    this.datetime = date.toISOString().replace(/[:\-]|\.\d{3}/g, &#x27;&#x27;)
+
+    // Remove the trailing &#x27;Z&#x27; on the timestamp string for CodeCommit git access
+    if (this.isCodeCommitGit) this.datetime = this.datetime.slice(0, -1)
+  }
+  return this.datetime
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Generate CodeCommit Git access password
+var signer = new aws4.RequestSigner({
+  service: &#x27;codecommit&#x27;,
+  host: &#x27;git-codecommit.us-east-1.amazonaws.com&#x27;,
+  method: &#x27;GIT&#x27;,
+  path: &#x27;/v1/repos/MyAwesomeRepo&#x27;,
+})
+var password = signer.<span class="apidocCodeKeywordSpan">getDateTime</span>() + &#x27;Z&#x27; + signer.signature()
+```
+
+API
+---
+
+### aws4.sign(requestOptions, [credentials])
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.isSingleRegion" id="apidoc.element.aws4.RequestSigner.prototype.isSingleRegion">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>isSingleRegion
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isSingleRegion = function () {
+  // Special case for S3 and SimpleDB in us-east-1
+  if ([&#x27;s3&#x27;, &#x27;sdb&#x27;].indexOf(this.service) &#x3e;= 0 &#x26;&#x26; this.region === &#x27;us-east-1&#x27;) return true
+
+  return [&#x27;cloudfront&#x27;, &#x27;ls&#x27;, &#x27;route53&#x27;, &#x27;iam&#x27;, &#x27;importexport&#x27;, &#x27;sts&#x27;]
+    .indexOf(this.service) &#x3e;= 0
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if ([&#x27;s3&#x27;, &#x27;sdb&#x27;].indexOf(this.service) &#x3e;= 0 &#x26;&#x26; this.region === &#x27;us-east-1&#x27;) return
+ true
+
+return [&#x27;cloudfront&#x27;, &#x27;ls&#x27;, &#x27;route53&#x27;, &#x27;iam&#x27;, &#x27;importexport&#x27;, &#x27;sts&#x27;]
+  .indexOf(this.service) &#x3e;= 0
+}
+
+RequestSigner.prototype.createHost = function() {
+var region = this.<span class="apidocCodeKeywordSpan">isSingleRegion</span>() ? &#x27;&#x27; :
+      (this.service === &#x27;s3&#x27; &#x26;&#x26; this.region !== &#x27;us-east-1&#x27; ? &#x27;-&#x27; : &#x27;.&#x27;) + this
+.region,
+    service = this.service === &#x27;ses&#x27; ? &#x27;email&#x27; : this.service
+return service + region + &#x27;.amazonaws.com&#x27;
+}
+
+RequestSigner.prototype.prepareRequest = function() {
+this.parsePath()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.matchHost" id="apidoc.element.aws4.RequestSigner.prototype.matchHost">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>matchHost
+        <span class="apidocSignatureSpan">(host)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">matchHost = function (host) {
+  var match = (host || &#x27;&#x27;).match(/([^\.]+)\.(?:([^\.]*)\.)?amazonaws\.com$/)
+  var hostParts = (match || []).slice(1, 3)
+
+  // ES&#x27;s hostParts are sometimes the other way round, if the value that is expected
+  // to be region equals ‘es’ switch them back
+  // e.g. search-cluster-name-aaaa00aaaa0aaa0aaaaaaa0aaa.us-east-1.es.amazonaws.com
+  if (hostParts[1] === &#x27;es&#x27;)
+    hostParts = hostParts.reverse()
+
+  return hostParts
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// request: { path | body, [host], [method], [headers], [service], [region] }
+// credentials: { accessKeyId, secretAccessKey, [sessionToken] }
+function RequestSigner(request, credentials) {
+
+if (typeof request === &#x27;string&#x27;) request = url.parse(request)
+
+var headers = request.headers = (request.headers || {}),
+    hostParts = this.<span class="apidocCodeKeywordSpan">matchHost</span>(request.hostname || request.host || headers.Host || headers
+.host)
+
+this.request = request
+this.credentials = credentials || this.defaultCredentials()
+
+this.service = request.service || hostParts[0] || &#x27;&#x27;
+this.region = request.region || hostParts[1] || &#x27;us-east-1&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.parsePath" id="apidoc.element.aws4.RequestSigner.prototype.parsePath">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>parsePath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parsePath = function () {
+  var path = this.request.path || &#x27;/&#x27;,
+      queryIx = path.indexOf(&#x27;?&#x27;),
+      query = null
+
+  if (queryIx &#x3e;= 0) {
+    query = querystring.parse(path.slice(queryIx + 1))
+    path = path.slice(0, queryIx)
+  }
+
+  // S3 doesn&#x27;t always encode characters &#x3e; 127 correctly and
+  // all services don&#x27;t encode characters &#x3e; 255 correctly
+  // So if there are non-reserved chars (and it&#x27;s not already all % encoded), just encode them all
+  if (/[^0-9A-Za-z!&#x27;()*\-._~%/]/.test(path)) {
+    path = path.split(&#x27;/&#x27;).map(function(piece) {
+      return querystring.escape(querystring.unescape(piece))
+    }).join(&#x27;/&#x27;)
+  }
+
+  this.parsedPath = {
+    path: path,
+    query: query,
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var region = this.isSingleRegion() ? &#x27;&#x27; :
+    (this.service === &#x27;s3&#x27; &#x26;&#x26; this.region !== &#x27;us-east-1&#x27; ? &#x27;-&#x27; : &#x27;.&#x27;) + this.
+region,
+  service = this.service === &#x27;ses&#x27; ? &#x27;email&#x27; : this.service
+  return service + region + &#x27;.amazonaws.com&#x27;
+}
+
+RequestSigner.prototype.prepareRequest = function() {
+  this.<span class="apidocCodeKeywordSpan">parsePath</span>()
+
+  var request = this.request, headers = request.headers, query
+
+  if (request.signQuery) {
+
+this.parsedPath.query = query = this.parsedPath.query || {}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.prepareRequest" id="apidoc.element.aws4.RequestSigner.prototype.prepareRequest">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>prepareRequest
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">prepareRequest = function () {
+  this.parsePath()
+
+  var request = this.request, headers = request.headers, query
+
+  if (request.signQuery) {
+
+    this.parsedPath.query = query = this.parsedPath.query || {}
+
+    if (this.credentials.sessionToken)
+      query[&#x27;X-Amz-Security-Token&#x27;] = this.credentials.sessionToken
+
+    if (this.service === &#x27;s3&#x27; &#x26;&#x26; !query[&#x27;X-Amz-Expires&#x27;])
+      query[&#x27;X-Amz-Expires&#x27;] = 86400
+
+    if (query[&#x27;X-Amz-Date&#x27;])
+      this.datetime = query[&#x27;X-Amz-Date&#x27;]
+    else
+      query[&#x27;X-Amz-Date&#x27;] = this.getDateTime()
+
+    query[&#x27;X-Amz-Algorithm&#x27;] = &#x27;AWS4-HMAC-SHA256&#x27;
+    query[&#x27;X-Amz-Credential&#x27;] = this.credentials.accessKeyId + &#x27;/&#x27; + this.credentialString()
+    query[&#x27;X-Amz-SignedHeaders&#x27;] = this.signedHeaders()
+
+  } else {
+
+    if (!request.doNotModifyHeaders &#x26;&#x26; !this.isCodeCommitGit) {
+      if (request.body &#x26;&#x26; !headers[&#x27;Content-Type&#x27;] &#x26;&#x26; !headers[&#x27;content-type&#x27;])
+        headers[&#x27;Content-Type&#x27;] = &#x27;application/x-www-form-urlencoded; charset=utf-8&#x27;
+
+      if (request.body &#x26;&#x26; !headers[&#x27;Content-Length&#x27;] &#x26;&#x26; !headers[&#x27;content-length&#x27;])
+        headers[&#x27;Content-Length&#x27;] = Buffer.byteLength(request.body)
+
+      if (this.credentials.sessionToken &#x26;&#x26; !headers[&#x27;X-Amz-Security-Token&#x27;] &#x26;&#x26; !headers[&#x27;x-amz-security-token&#x27;])
+        headers[&#x27;X-Amz-Security-Token&#x27;] = this.credentials.sessionToken
+
+      if (this.service === &#x27;s3&#x27; &#x26;&#x26; !headers[&#x27;X-Amz-Content-Sha256&#x27;] &#x26;&#x26; !headers[&#x27;x-amz-content-sha256&#x27;])
+        headers[&#x27;X-Amz-Content-Sha256&#x27;] = hash(this.request.body || &#x27;&#x27;, &#x27;hex&#x27;)
+
+      if (headers[&#x27;X-Amz-Date&#x27;] || headers[&#x27;x-amz-date&#x27;])
+        this.datetime = headers[&#x27;X-Amz-Date&#x27;] || headers[&#x27;x-amz-date&#x27;]
+      else
+        headers[&#x27;X-Amz-Date&#x27;] = this.getDateTime()
+    }
+
+    delete headers.Authorization
+    delete headers.authorization
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  delete headers.Authorization
+  delete headers.authorization
+}
+}
+
+RequestSigner.prototype.sign = function() {
+if (!this.parsedPath) this.<span class="apidocCodeKeywordSpan">prepareRequest</span>()
+
+if (this.request.signQuery) {
+  this.parsedPath.query[&#x27;X-Amz-Signature&#x27;] = this.signature()
+} else {
+  this.request.headers.Authorization = this.authHeader()
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.sign" id="apidoc.element.aws4.RequestSigner.prototype.sign">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>sign
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sign = function () {
+  if (!this.parsedPath) this.prepareRequest()
+
+  if (this.request.signQuery) {
+    this.parsedPath.query[&#x27;X-Amz-Signature&#x27;] = this.signature()
+  } else {
+    this.request.headers.Authorization = this.authHeader()
+  }
+
+  this.request.path = this.formatPath()
+
+  return this.request
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+// alternatively (as aws4 can infer the host):
+opts = {service: &#x27;sqs&#x27;, region: &#x27;us-east-1&#x27;, path: &#x27;/?Action=ListQueues&#x27;}
+
+// alternatively (as us-east-1 is default):
+opts = {service: &#x27;sqs&#x27;, path: &#x27;/?Action=ListQueues&#x27;}
+
+aws4.<span class="apidocCodeKeywordSpan">sign</span>(opts) // assumes AWS credentials are available in process.env
+
+console.log(opts)
+/*
+{
+host: &#x27;sqs.us-east-1.amazonaws.com&#x27;,
+path: &#x27;/?Action=ListQueues&#x27;,
+headers: {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.signature" id="apidoc.element.aws4.RequestSigner.prototype.signature">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>signature
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">signature = function () {
+  var date = this.getDate(),
+      cacheKey = [this.credentials.secretAccessKey, date, this.region, this.service].join(),
+      kDate, kRegion, kService, kCredentials = credentialsCache.get(cacheKey)
+  if (!kCredentials) {
+    kDate = hmac(&#x27;AWS4&#x27; + this.credentials.secretAccessKey, date)
+    kRegion = hmac(kDate, this.region)
+    kService = hmac(kRegion, this.service)
+    kCredentials = hmac(kService, &#x27;aws4_request&#x27;)
+    credentialsCache.set(cacheKey, kCredentials)
+  }
+  return hmac(kCredentials, this.stringToSign(), &#x27;hex&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Generate CodeCommit Git access password
+var signer = new aws4.RequestSigner({
+  service: &#x27;codecommit&#x27;,
+  host: &#x27;git-codecommit.us-east-1.amazonaws.com&#x27;,
+  method: &#x27;GIT&#x27;,
+  path: &#x27;/v1/repos/MyAwesomeRepo&#x27;,
+})
+var password = signer.getDateTime() + &#x27;Z&#x27; + signer.<span class="apidocCodeKeywordSpan">signature</span>()
+```
+
+API
+---
+
+### aws4.sign(requestOptions, [credentials])
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.signedHeaders" id="apidoc.element.aws4.RequestSigner.prototype.signedHeaders">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>signedHeaders
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">signedHeaders = function () {
+  return Object.keys(this.request.headers)
+    .map(function(key) { return key.toLowerCase() })
+    .sort()
+    .join(&#x27;;&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (query[&#x27;X-Amz-Date&#x27;])
+  this.datetime = query[&#x27;X-Amz-Date&#x27;]
+else
+  query[&#x27;X-Amz-Date&#x27;] = this.getDateTime()
+
+query[&#x27;X-Amz-Algorithm&#x27;] = &#x27;AWS4-HMAC-SHA256&#x27;
+query[&#x27;X-Amz-Credential&#x27;] = this.credentials.accessKeyId + &#x27;/&#x27; + this.credentialString()
+query[&#x27;X-Amz-SignedHeaders&#x27;] = this.<span class="apidocCodeKeywordSpan">signedHeaders</span>()
+
+  } else {
+
+if (!request.doNotModifyHeaders &#x26;&#x26; !this.isCodeCommitGit) {
+  if (request.body &#x26;&#x26; !headers[&#x27;Content-Type&#x27;] &#x26;&#x26; !headers[&#x27;content-type&#x27;])
+    headers[&#x27;Content-Type&#x27;] = &#x27;application/x-www-form-urlencoded; charset=utf-8&#x27;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.aws4.RequestSigner.prototype.stringToSign" id="apidoc.element.aws4.RequestSigner.prototype.stringToSign">
+        function <span class="apidocSignatureSpan">aws4.RequestSigner.prototype.</span>stringToSign
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stringToSign = function () {
+  return [
+    &#x27;AWS4-HMAC-SHA256&#x27;,
+    this.getDateTime(),
+    this.credentialString(),
+    hash(this.canonicalString(), &#x27;hex&#x27;),
+  ].join(&#x27;\n&#x27;)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!kCredentials) {
+  kDate = hmac(&#x27;AWS4&#x27; + this.credentials.secretAccessKey, date)
+  kRegion = hmac(kDate, this.region)
+  kService = hmac(kRegion, this.service)
+  kCredentials = hmac(kService, &#x27;aws4_request&#x27;)
+  credentialsCache.set(cacheKey, kCredentials)
+}
+return hmac(kCredentials, this.<span class="apidocCodeKeywordSpan">stringToSign</span>(), &#x27;hex&#x27;)
+}
+
+RequestSigner.prototype.stringToSign = function() {
+return [
+  &#x27;AWS4-HMAC-SHA256&#x27;,
+  this.getDateTime(),
+  this.credentialString(),
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
