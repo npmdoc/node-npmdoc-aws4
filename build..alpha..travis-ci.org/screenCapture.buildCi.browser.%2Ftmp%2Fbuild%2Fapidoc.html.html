@@ -294,23 +294,7 @@
 
   this.isCodeCommitGit = this.service === 'codecommit' &amp;&amp; request.method === 'GIT'
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  }
-}))
-/*
-(HTTP 202, empty response)
-*/
-
-// Generate CodeCommit Git access password
-var signer = new aws4.<span class="apidocCodeKeywordSpan">RequestSigner</span>({
-  service: 'codecommit',
-  host: 'git-codecommit.us-east-1.amazonaws.com',
-  method: 'GIT',
-  path: '/v1/repos/MyAwesomeRepo',
-})
-var password = signer.getDateTime() + 'Z' + signer.signature()
-```
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -325,23 +309,7 @@ var password = signer.getDateTime() + 'Z' + signer.signature()
     <li>description and source-code<pre class="apidocCodePre">sign = function (request, credentials) {
   return new RequestSigner(request, credentials).sign()
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-// alternatively (as aws4 can infer the host):
-opts = {service: 'sqs', region: 'us-east-1', path: '/?Action=ListQueues'}
-
-// alternatively (as us-east-1 is default):
-opts = {service: 'sqs', path: '/?Action=ListQueues'}
-
-aws4.<span class="apidocCodeKeywordSpan">sign</span>(opts) // assumes AWS credentials are available in process.env
-
-console.log(opts)
-/*
-{
-host: 'sqs.us-east-1.amazonaws.com',
-path: '/?Action=ListQueues',
-headers: {
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -391,23 +359,7 @@ headers: {
 
   this.isCodeCommitGit = this.service === 'codecommit' &amp;&amp; request.method === 'GIT'
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  }
-}))
-/*
-(HTTP 202, empty response)
-*/
-
-// Generate CodeCommit Git access password
-var signer = new aws4.<span class="apidocCodeKeywordSpan">RequestSigner</span>({
-  service: 'codecommit',
-  host: 'git-codecommit.us-east-1.amazonaws.com',
-  method: 'GIT',
-  path: '/v1/repos/MyAwesomeRepo',
-})
-var password = signer.getDateTime() + 'Z' + signer.signature()
-```
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -431,22 +383,7 @@ var password = signer.getDateTime() + 'Z' + signer.signature()
     'Signature=' + this.signature(),
   ].join(', ')
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-RequestSigner.prototype.sign = function() {
-  if (!this.parsedPath) this.prepareRequest()
-
-  if (this.request.signQuery) {
-    this.parsedPath.query['X-Amz-Signature'] = this.signature()
-  } else {
-    this.request.headers.Authorization = this.<span class="apidocCodeKeywordSpan">authHeader</span>()
-  }
-
-  this.request.path = this.formatPath()
-
-  return this.request
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -468,23 +405,7 @@ RequestSigner.prototype.sign = function() {
     .map(function(key) { return key.toLowerCase() + ':' + trimAll(headers[key]) })
     .join('\n')
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  if (decodeSlashesInPath) pathStr = pathStr.replace(/%2F/g, '/')
-}
-
-return [
-  this.request.method || 'GET',
-  pathStr,
-  queryStr,
-  this.<span class="apidocCodeKeywordSpan">canonicalHeaders</span>() + '\n',
-  this.signedHeaders(),
-  bodyHash,
-].join('\n')
-}
-
-RequestSigner.prototype.canonicalHeaders = function() {
-var headers = this.request.headers
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -550,23 +471,7 @@ var headers = this.request.headers
     bodyHash,
   ].join('\n')
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-}
-
-RequestSigner.prototype.stringToSign = function() {
-return [
-  'AWS4-HMAC-SHA256',
-  this.getDateTime(),
-  this.credentialString(),
-  hash(this.<span class="apidocCodeKeywordSpan">canonicalString</span>(), 'hex'),
-].join('\n')
-}
-
-RequestSigner.prototype.canonicalString = function() {
-if (!this.parsedPath) this.prepareRequest()
-
-var pathStr = this.parsedPath.path,
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -584,23 +489,7 @@ var pathStr = this.parsedPath.path,
       service = this.service === 'ses' ? 'email' : this.service
   return service + region + '.amazonaws.com'
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-// SES uses a different domain from the service name
-if (this.service === 'email') this.service = 'ses'
-
-if (!request.method &amp;&amp; request.body)
-  request.method = 'POST'
-
-if (!headers.Host &amp;&amp; !headers.host) {
-  headers.Host = request.hostname || request.host || this.<span class="apidocCodeKeywordSpan">createHost</span>()
-
-  // If a port is specified explicitly, use it as is
-  if (request.port)
-    headers.Host += ':' + request.port
-}
-if (!request.hostname &amp;&amp; !request.host)
-  request.hostname = headers.Host || headers.host
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -620,24 +509,7 @@ if (!request.hostname &amp;&amp; !request.host)
     'aws4_request',
   ].join('/')
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-if (query['X-Amz-Date'])
-  this.datetime = query['X-Amz-Date']
-else
-  query['X-Amz-Date'] = this.getDateTime()
-
-query['X-Amz-Algorithm'] = 'AWS4-HMAC-SHA256'
-query['X-Amz-Credential'] = this.credentials.accessKeyId + '/' + this.<span class="apidocCodeKeywordSpan">credentialString
-</span>()
-query['X-Amz-SignedHeaders'] = this.signedHeaders()
-
-  } else {
-
-if (!request.doNotModifyHeaders &amp;&amp; !this.isCodeCommitGit) {
-  if (request.body &amp;&amp; !headers['Content-Type'] &amp;&amp; !headers['content-type'])
-    headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=utf-8'
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -657,22 +529,7 @@ if (!request.doNotModifyHeaders &amp;&amp; !this.isCodeCommitGit) {
     sessionToken: env.AWS_SESSION_TOKEN,
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-if (typeof request === 'string') request = url.parse(request)
-
-var headers = request.headers = (request.headers || {}),
-    hostParts = this.matchHost(request.hostname || request.host || headers.Host || headers.host)
-
-this.request = request
-this.credentials = credentials || this.<span class="apidocCodeKeywordSpan">defaultCredentials</span>()
-
-this.service = request.service || hostParts[0] || ''
-this.region = request.region || hostParts[1] || 'us-east-1'
-
-// SES uses a different domain from the service name
-if (this.service === 'email') this.service = 'ses'
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -695,23 +552,7 @@ if (this.service === 'email') this.service = 'ses'
 
   return path + '?' + encodeRfc3986(querystring.stringify(query))
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-if (this.request.signQuery) {
-  this.parsedPath.query['X-Amz-Signature'] = this.signature()
-} else {
-  this.request.headers.Authorization = this.authHeader()
-}
-
-this.request.path = this.<span class="apidocCodeKeywordSpan">formatPath</span>()
-
-return this.request
-}
-
-RequestSigner.prototype.getDateTime = function() {
-if (!this.datetime) {
-  var headers = this.request.headers,
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -726,23 +567,7 @@ if (!this.datetime) {
     <li>description and source-code<pre class="apidocCodePre">getDate = function () {
   return this.getDateTime().substr(0, 8)
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  'AWS4-HMAC-SHA256 Credential=' + this.credentials.accessKeyId + '/' + this.credentialString(),
-  'SignedHeaders=' + this.signedHeaders(),
-  'Signature=' + this.signature(),
-].join(', ')
-}
-
-RequestSigner.prototype.signature = function() {
-var date = this.<span class="apidocCodeKeywordSpan">getDate</span>(),
-    cacheKey = [this.credentials.secretAccessKey, date, this.region, this.service].join(),
-    kDate, kRegion, kService, kCredentials = credentialsCache.get(cacheKey)
-if (!kCredentials) {
-  kDate = hmac('AWS4' + this.credentials.secretAccessKey, date)
-  kRegion = hmac(kDate, this.region)
-  kService = hmac(kRegion, this.service)
-  kCredentials = hmac(kService, 'aws4_request')
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -766,22 +591,7 @@ if (!kCredentials) {
   }
   return this.datetime
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-// Generate CodeCommit Git access password
-var signer = new aws4.RequestSigner({
-  service: 'codecommit',
-  host: 'git-codecommit.us-east-1.amazonaws.com',
-  method: 'GIT',
-  path: '/v1/repos/MyAwesomeRepo',
-})
-var password = signer.<span class="apidocCodeKeywordSpan">getDateTime</span>() + 'Z' + signer.signature()
-```
-
-API
----
-
-### aws4.sign(requestOptions, [credentials])
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -800,25 +610,7 @@ API
   return ['cloudfront', 'ls', 'route53', 'iam', 'importexport', 'sts']
     .indexOf(this.service) &gt;= 0
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-if (['s3', 'sdb'].indexOf(this.service) &gt;= 0 &amp;&amp; this.region === 'us-east-1') return
- true
-
-return ['cloudfront', 'ls', 'route53', 'iam', 'importexport', 'sts']
-  .indexOf(this.service) &gt;= 0
-}
-
-RequestSigner.prototype.createHost = function() {
-var region = this.<span class="apidocCodeKeywordSpan">isSingleRegion</span>() ? '' :
-      (this.service === 's3' &amp;&amp; this.region !== 'us-east-1' ? '-' : '.') + this
-.region,
-    service = this.service === 'ses' ? 'email' : this.service
-return service + region + '.amazonaws.com'
-}
-
-RequestSigner.prototype.prepareRequest = function() {
-this.parsePath()
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -842,23 +634,7 @@ this.parsePath()
 
   return hostParts
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-// request: { path | body, [host], [method], [headers], [service], [region] }
-// credentials: { accessKeyId, secretAccessKey, [sessionToken] }
-function RequestSigner(request, credentials) {
-
-if (typeof request === 'string') request = url.parse(request)
-
-var headers = request.headers = (request.headers || {}),
-    hostParts = this.<span class="apidocCodeKeywordSpan">matchHost</span>(request.hostname || request.host || headers.Host || headers
-.host)
-
-this.request = request
-this.credentials = credentials || this.defaultCredentials()
-
-this.service = request.service || hostParts[0] || ''
-this.region = request.region || hostParts[1] || 'us-east-1'
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -894,23 +670,7 @@ this.region = request.region || hostParts[1] || 'us-east-1'
     query: query,
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  var region = this.isSingleRegion() ? '' :
-    (this.service === 's3' &amp;&amp; this.region !== 'us-east-1' ? '-' : '.') + this.
-region,
-  service = this.service === 'ses' ? 'email' : this.service
-  return service + region + '.amazonaws.com'
-}
-
-RequestSigner.prototype.prepareRequest = function() {
-  this.<span class="apidocCodeKeywordSpan">parsePath</span>()
-
-  var request = this.request, headers = request.headers, query
-
-  if (request.signQuery) {
-
-this.parsedPath.query = query = this.parsedPath.query || {}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -971,22 +731,7 @@ this.parsedPath.query = query = this.parsedPath.query || {}
     delete headers.authorization
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-  delete headers.Authorization
-  delete headers.authorization
-}
-}
-
-RequestSigner.prototype.sign = function() {
-if (!this.parsedPath) this.<span class="apidocCodeKeywordSpan">prepareRequest</span>()
-
-if (this.request.signQuery) {
-  this.parsedPath.query['X-Amz-Signature'] = this.signature()
-} else {
-  this.request.headers.Authorization = this.authHeader()
-}
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1011,23 +756,7 @@ if (this.request.signQuery) {
 
   return this.request
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-
-// alternatively (as aws4 can infer the host):
-opts = {service: 'sqs', region: 'us-east-1', path: '/?Action=ListQueues'}
-
-// alternatively (as us-east-1 is default):
-opts = {service: 'sqs', path: '/?Action=ListQueues'}
-
-aws4.<span class="apidocCodeKeywordSpan">sign</span>(opts) // assumes AWS credentials are available in process.env
-
-console.log(opts)
-/*
-{
-host: 'sqs.us-east-1.amazonaws.com',
-path: '/?Action=ListQueues',
-headers: {
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1052,22 +781,7 @@ headers: {
   }
   return hmac(kCredentials, this.stringToSign(), 'hex')
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-// Generate CodeCommit Git access password
-var signer = new aws4.RequestSigner({
-  service: 'codecommit',
-  host: 'git-codecommit.us-east-1.amazonaws.com',
-  method: 'GIT',
-  path: '/v1/repos/MyAwesomeRepo',
-})
-var password = signer.getDateTime() + 'Z' + signer.<span class="apidocCodeKeywordSpan">signature</span>()
-```
-
-API
----
-
-### aws4.sign(requestOptions, [credentials])
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1085,22 +799,7 @@ API
     .sort()
     .join(';')
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-if (query['X-Amz-Date'])
-  this.datetime = query['X-Amz-Date']
-else
-  query['X-Amz-Date'] = this.getDateTime()
-
-query['X-Amz-Algorithm'] = 'AWS4-HMAC-SHA256'
-query['X-Amz-Credential'] = this.credentials.accessKeyId + '/' + this.credentialString()
-query['X-Amz-SignedHeaders'] = this.<span class="apidocCodeKeywordSpan">signedHeaders</span>()
-
-  } else {
-
-if (!request.doNotModifyHeaders &amp;&amp; !this.isCodeCommitGit) {
-  if (request.body &amp;&amp; !headers['Content-Type'] &amp;&amp; !headers['content-type'])
-    headers['Content-Type'] = 'application/x-www-form-urlencoded; charset=utf-8'
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1120,23 +819,7 @@ if (!request.doNotModifyHeaders &amp;&amp; !this.isCodeCommitGit) {
     hash(this.canonicalString(), 'hex'),
   ].join('\n')
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-if (!kCredentials) {
-  kDate = hmac('AWS4' + this.credentials.secretAccessKey, date)
-  kRegion = hmac(kDate, this.region)
-  kService = hmac(kRegion, this.service)
-  kCredentials = hmac(kService, 'aws4_request')
-  credentialsCache.set(cacheKey, kCredentials)
-}
-return hmac(kCredentials, this.<span class="apidocCodeKeywordSpan">stringToSign</span>(), 'hex')
-}
-
-RequestSigner.prototype.stringToSign = function() {
-return [
-  'AWS4-HMAC-SHA256',
-  this.getDateTime(),
-  this.credentialString(),
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
