@@ -1,0 +1,335 @@
+<svg height="3230" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="3230" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26"></tspan>
+
+<tspan x="10" y="42">[MODE_BUILD=npmTest] - 2018-06-04T08:10:08.350Z - npm-testing /home/travis/build/npmdoc/node-npm\</tspan>
+<tspan x="10" y="58">doc-aws4</tspan>
+
+<tspan x="10" y="74"></tspan>
+
+<tspan x="10" y="90"></tspan>
+
+<tspan x="10" y="106">npmTest - merged test-report from file /home/travis/build/npmdoc/node-npmdoc-aws4/tmp/build/test\</tspan>
+<tspan x="10" y="122">-report.json</tspan>
+
+<tspan x="10" y="138">&gt; server listening on http-port 36704</tspan>
+
+<tspan x="10" y="154">[node test-case 1 of 8 passed] - testCase_buildApidoc_default</tspan>
+
+<tspan x="10" y="170">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/package.\</tspan>
+<tspan x="10" y="186">json</tspan>
+
+<tspan x="10" y="202">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/aws4.js</tspan>
+
+<tspan x="10" y="218">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/LICENSE</tspan>
+
+<tspan x="10" y="234">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/lru.js</tspan>
+
+<tspan x="10" y="250">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/package.\</tspan>
+<tspan x="10" y="266">json</tspan>
+
+<tspan x="10" y="282">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/README.m\</tspan>
+<tspan x="10" y="298">d</tspan>
+
+<tspan x="10" y="314">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/.travis.\</tspan>
+<tspan x="10" y="330">yml</tspan>
+
+<tspan x="10" y="346">apidocCreate - requiring /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4 ...</tspan>
+
+<tspan x="10" y="362">apidocCreate - ... required /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4</tspan>
+
+<tspan x="10" y="378">apidocCreate - libFile lru.js</tspan>
+
+<tspan x="10" y="394">created apidoc file /home/travis/build/npmdoc/node-npmdoc-aws4/tmp/build/apidoc.html</tspan>
+
+<tspan x="10" y="410"></tspan>
+
+<tspan x="10" y="426">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/package.\</tspan>
+<tspan x="10" y="442">json</tspan>
+
+<tspan x="10" y="458">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/aws4.js</tspan>
+
+<tspan x="10" y="474">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/LICENSE</tspan>
+
+<tspan x="10" y="490">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/lru.js</tspan>
+
+<tspan x="10" y="506">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/package.\</tspan>
+<tspan x="10" y="522">json</tspan>
+
+<tspan x="10" y="538">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/README.m\</tspan>
+<tspan x="10" y="554">d</tspan>
+
+<tspan x="10" y="570">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/.travis.\</tspan>
+<tspan x="10" y="586">yml</tspan>
+
+<tspan x="10" y="602">apidocCreate - requiring /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4 ...</tspan>
+
+<tspan x="10" y="618">apidocCreate - ... required /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4</tspan>
+
+<tspan x="10" y="634">apidocCreate - libFile lru.js</tspan>
+
+<tspan x="10" y="650">created customOrg file /home/travis/build/npmdoc/node-npmdoc-aws4/README.md</tspan>
+
+<tspan x="10" y="666"></tspan>
+
+<tspan x="10" y="682">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/package.\</tspan>
+<tspan x="10" y="698">json</tspan>
+
+<tspan x="10" y="714">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/aws4.js</tspan>
+
+<tspan x="10" y="730">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/LICENSE</tspan>
+
+<tspan x="10" y="746">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/lru.js</tspan>
+
+<tspan x="10" y="762">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/package.\</tspan>
+<tspan x="10" y="778">json</tspan>
+
+<tspan x="10" y="794">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/README.m\</tspan>
+<tspan x="10" y="810">d</tspan>
+
+<tspan x="10" y="826">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/.travis.\</tspan>
+<tspan x="10" y="842">yml</tspan>
+
+<tspan x="10" y="858">apidocCreate - requiring /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4 ...</tspan>
+
+<tspan x="10" y="874">apidocCreate - ... required /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4</tspan>
+
+<tspan x="10" y="890">apidocCreate - libFile lru.js</tspan>
+
+<tspan x="10" y="906">created apidoc file /home/travis/build/npmdoc/node-npmdoc-aws4/tmp/build/apidoc.html</tspan>
+
+<tspan x="10" y="922"></tspan>
+
+<tspan x="10" y="938">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/package.\</tspan>
+<tspan x="10" y="954">json</tspan>
+
+<tspan x="10" y="970">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/aws4.js</tspan>
+
+<tspan x="10" y="986">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/LICENSE</tspan>
+
+<tspan x="10" y="1002">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/lru.js</tspan>
+
+<tspan x="10" y="1018">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/package.\</tspan>
+<tspan x="10" y="1034">json</tspan>
+
+<tspan x="10" y="1050">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/README.m\</tspan>
+<tspan x="10" y="1066">d</tspan>
+
+<tspan x="10" y="1082">apidocCreate - readExample /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4/.travis.\</tspan>
+<tspan x="10" y="1098">yml</tspan>
+
+<tspan x="10" y="1114">apidocCreate - requiring /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4 ...</tspan>
+
+<tspan x="10" y="1130">apidocCreate - ... required /home/travis/build/npmdoc/node-npmdoc-aws4/node_modules/aws4</tspan>
+
+<tspan x="10" y="1146">apidocCreate - libFile lru.js</tspan>
+
+<tspan x="10" y="1162">created customOrg file /home/travis/build/npmdoc/node-npmdoc-aws4/README.md</tspan>
+
+<tspan x="10" y="1178"></tspan>
+
+<tspan x="10" y="1194">[node test-case 2 of 8 passed] - testCase_buildLib_default</tspan>
+
+<tspan x="10" y="1210">[node test-case 3 of 8 passed] - testCase_buildReadme_default</tspan>
+
+<tspan x="10" y="1226">[node test-case 4 of 8 passed] - testCase_buildTest_default</tspan>
+
+<tspan x="10" y="1242">[node test-case 5 of 8 passed] - testCase_nop_default</tspan>
+
+<tspan x="10" y="1258"></tspan>
+
+<tspan x="10" y="1274">browserTest - created electron entry-page /home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electro\</tspan>
+<tspan x="10" y="1290">n.163c9d8a89f0.5170197d3615c.html</tspan>
+
+<tspan x="10" y="1306"></tspan>
+
+<tspan x="10" y="1322">(node:4672) DeprecationWarning: _linklist module is deprecated. Please use a userland alternativ\</tspan>
+<tspan x="10" y="1338">e.</tspan>
+
+<tspan x="10" y="1354">(node:4672) DeprecationWarning: sys is deprecated. Use util instead.</tspan>
+
+<tspan x="10" y="1370">[node test-case 6 of 8 passed] - testCase_buildCustomOrg_default</tspan>
+
+<tspan x="10" y="1386">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
+
+<tspan x="10" y="1402">&gt; server listening on http-port 43831</tspan>
+
+<tspan x="10" y="1418">Xlib:  extension "RANDR" missing on display ":99.0".</tspan>
+
+<tspan x="10" y="1434">[4884:0604/081010.625507:WARNING:audio_manager.cc(295)] Multiple instances of AudioManager detec\</tspan>
+<tspan x="10" y="1450">ted</tspan>
+
+<tspan x="10" y="1466">[4884:0604/081010.625581:WARNING:audio_manager.cc(254)] Multiple instances of AudioManager detec\</tspan>
+<tspan x="10" y="1482">ted</tspan>
+
+<tspan x="10" y="1498">[4920:0604/081010.675138:ERROR:sandbox_linux.cc(343)] InitializeSandbox() called with multiple t\</tspan>
+<tspan x="10" y="1514">hreads in process gpu-process. </tspan>
+
+<tspan x="10" y="1530">[4884:0604/081010.799258:ERROR:browser_gpu_channel_host_factory.cc(125)] Failed to create channe\</tspan>
+<tspan x="10" y="1546">l.</tspan>
+
+<tspan x="10" y="1562">[4884:0604/081010.799755:ERROR:browser_gpu_channel_host_factory.cc(125)] Failed to create channe\</tspan>
+<tspan x="10" y="1578">l.</tspan>
+
+<tspan x="10" y="1594">[4884:0604/081010.800398:ERROR:browser_gpu_channel_host_factory.cc(125)] Failed to create channe\</tspan>
+<tspan x="10" y="1610">l.</tspan>
+
+<tspan x="10" y="1626">[4884:0604/081010.800554:ERROR:browser_gpu_channel_host_factory.cc(125)] Failed to create channe\</tspan>
+<tspan x="10" y="1642">l.</tspan>
+
+<tspan x="10" y="1658">[4884:0604/081010.800687:ERROR:browser_gpu_channel_host_factory.cc(125)] Failed to create channe\</tspan>
+<tspan x="10" y="1674">l.</tspan>
+
+<tspan x="10" y="1690"></tspan>
+
+<tspan x="10" y="1706">browserTest - opened http://127.0.0.1:36704?modeTest=1&amp;timeoutDefault=120000</tspan>
+
+<tspan x="10" y="1722"></tspan>
+
+<tspan x="10" y="1738">[4884:0604/081011.569831:INFO:CONSOLE(266)] "[browser test-case 1 of 8 passed] - testCase_buildA\</tspan>
+<tspan x="10" y="1754">pidoc_default", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a8\</tspan>
+<tspan x="10" y="1770">9f0.5170197d3615c.html (266)</tspan>
+
+<tspan x="10" y="1786">[4884:0604/081011.581529:INFO:CONSOLE(266)] "[browser test-case 2 of 8 passed] - testCase_buildA\</tspan>
+<tspan x="10" y="1802">pp_default", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0\</tspan>
+<tspan x="10" y="1818">.5170197d3615c.html (266)</tspan>
+
+<tspan x="10" y="1834">[4884:0604/081011.594058:INFO:CONSOLE(266)] "[browser test-case 3 of 8 passed] - testCase_buildC\</tspan>
+<tspan x="10" y="1850">ustomOrg_default", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d\</tspan>
+<tspan x="10" y="1866">8a89f0.5170197d3615c.html (266)</tspan>
+
+<tspan x="10" y="1882">[4884:0604/081011.594096:INFO:CONSOLE(266)] "[browser test-case 4 of 8 passed] - testCase_buildL\</tspan>
+<tspan x="10" y="1898">ib_default", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0\</tspan>
+<tspan x="10" y="1914">.5170197d3615c.html (266)</tspan>
+
+<tspan x="10" y="1930">[4884:0604/081011.594119:INFO:CONSOLE(266)] "[browser test-case 5 of 8 passed] - testCase_buildR\</tspan>
+<tspan x="10" y="1946">eadme_default", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a8\</tspan>
+<tspan x="10" y="1962">9f0.5170197d3615c.html (266)</tspan>
+
+<tspan x="10" y="1978">[4884:0604/081011.594129:INFO:CONSOLE(266)] "[browser test-case 6 of 8 passed] - testCase_buildT\</tspan>
+<tspan x="10" y="1994">est_default", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f\</tspan>
+<tspan x="10" y="2010">0.5170197d3615c.html (266)</tspan>
+
+<tspan x="10" y="2026">[4884:0604/081011.594153:INFO:CONSOLE(266)] "[browser test-case 7 of 8 passed] - testCase_nop_de\</tspan>
+<tspan x="10" y="2042">fault", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0.5170\</tspan>
+<tspan x="10" y="2058">197d3615c.html (266)</tspan>
+
+<tspan x="10" y="2074">[4884:0604/081011.598669:INFO:CONSOLE(266)] "domStyleValidateUnmatched 0. 0 .testReportDiv .test\</tspan>
+<tspan x="10" y="2090">Failed {", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0.5\</tspan>
+<tspan x="10" y="2106">170197d3615c.html (266)</tspan>
+
+<tspan x="10" y="2122">[4884:0604/081011.598743:INFO:CONSOLE(266)] "domStyleValidateUnmatched 1. 0 .testReportDiv img {\</tspan>
+<tspan x="10" y="2138">", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0.5170197d3\</tspan>
+<tspan x="10" y="2154">615c.html (266)</tspan>
+
+<tspan x="10" y="2170">[4884:0604/081011.598778:INFO:CONSOLE(266)] "domStyleValidateUnmatched 2. 1 .testReportDiv .disp\</tspan>
+<tspan x="10" y="2186">layNone {", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0.\</tspan>
+<tspan x="10" y="2202">5170197d3615c.html (266)</tspan>
+
+<tspan x="10" y="2218">[4884:0604/081011.598801:INFO:CONSOLE(266)] "domStyleValidateUnmatched 3. 1 .testReportDiv .foot\</tspan>
+<tspan x="10" y="2234">er {", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0.51701\</tspan>
+<tspan x="10" y="2250">97d3615c.html (266)</tspan>
+
+<tspan x="10" y="2266">[4884:0604/081011.601007:INFO:CONSOLE(266)] "domStyleValidateUnmatched 4. 1 .testReportDiv .summ\</tspan>
+<tspan x="10" y="2282">ary {", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0.5170\</tspan>
+<tspan x="10" y="2298">197d3615c.html (266)</tspan>
+
+<tspan x="10" y="2314">[4884:0604/081011.601071:INFO:CONSOLE(266)] "domStyleValidateUnmatched 5. 1 .testReportDiv pre {\</tspan>
+<tspan x="10" y="2330">", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0.5170197d3\</tspan>
+<tspan x="10" y="2346">615c.html (266)</tspan>
+
+<tspan x="10" y="2362">[4884:0604/081011.604874:INFO:CONSOLE(266)] "domStyleValidateUnmatched 6. 1 body &gt; pre,", source\</tspan>
+<tspan x="10" y="2378">: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0.5170197d3615c.html\</tspan>
+<tspan x="10" y="2394"> (266)</tspan>
+
+<tspan x="10" y="2410">[4884:0604/081011.608663:INFO:CONSOLE(266)] "domStyleValidateUnmatched 7. 1 body &gt; pre,", source\</tspan>
+<tspan x="10" y="2426">: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0.5170197d3615c.html\</tspan>
+<tspan x="10" y="2442"> (266)</tspan>
+
+<tspan x="10" y="2458">[4884:0604/081011.613266:INFO:CONSOLE(266)] "domStyleValidateUnmatched 8. 1 body {", source: fil\</tspan>
+<tspan x="10" y="2474">e:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0.5170197d3615c.html (266\</tspan>
+<tspan x="10" y="2490">)</tspan>
+
+<tspan x="10" y="2506">[4884:0604/081011.617024:INFO:CONSOLE(266)] "domStyleValidateUnmatched 9. 1 body {", source: fil\</tspan>
+<tspan x="10" y="2522">e:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0.5170197d3615c.html (266\</tspan>
+<tspan x="10" y="2538">)</tspan>
+
+<tspan x="10" y="2554">[4884:0604/081011.623885:INFO:CONSOLE(266)] "[browser test-case 8 of 8 passed] - testCase_webpag\</tspan>
+<tspan x="10" y="2570">e_default", source: file:///home/travis/build/npmdoc/node-npmdoc-aws4/tmp/electron.163c9d8a89f0.\</tspan>
+<tspan x="10" y="2586">5170197d3615c.html (266)</tspan>
+
+<tspan x="10" y="2602">[node test-case 7 of 8 passed] - testCase_buildApp_default</tspan>
+
+<tspan x="10" y="2618"></tspan>
+
+<tspan x="10" y="2634">browserTest - created screenshot file /home/travis/build/npmdoc/node-npmdoc-aws4/tmp/build/scree\</tspan>
+<tspan x="10" y="2650">nshot.npmTest.browser.%2F.png</tspan>
+
+<tspan x="10" y="2666"></tspan>
+
+<tspan x="10" y="2682">browserTest - created screenshot file /home/travis/build/npmdoc/node-npmdoc-aws4/tmp/build/scree\</tspan>
+<tspan x="10" y="2698">nshot.npmTest.browser.%2F.html</tspan>
+
+<tspan x="10" y="2714"></tspan>
+
+<tspan x="10" y="2730">browserTest - exit-code 0 - http://127.0.0.1:36704?modeTest=1&amp;timeoutDefault=120000</tspan>
+
+<tspan x="10" y="2746"></tspan>
+
+<tspan x="10" y="2762"></tspan>
+
+<tspan x="10" y="2778">browserTest - merged coverage from file /home/travis/build/npmdoc/node-npmdoc-aws4/tmp/coverage.\</tspan>
+<tspan x="10" y="2794">npmTest.browser.%2F.json</tspan>
+
+<tspan x="10" y="2810"></tspan>
+
+<tspan x="10" y="2826"></tspan>
+
+<tspan x="10" y="2842">browserTest - merged test-report from file /home/travis/build/npmdoc/node-npmdoc-aws4/tmp/test-r\</tspan>
+<tspan x="10" y="2858">eport.npmTest.browser.%2F.json</tspan>
+
+<tspan x="10" y="2874"></tspan>
+
+<tspan x="10" y="2890">[node test-case 8 of 8 passed] - testCase_webpage_default</tspan>
+
+<tspan x="10" y="2906"></tspan>
+
+<tspan x="10" y="2922">npmTest - merged test-report from file /home/travis/build/npmdoc/node-npmdoc-aws4/tmp/build/test\</tspan>
+<tspan x="10" y="2938">-report.json</tspan>
+
+<tspan x="10" y="2954"></tspan>
+
+<tspan x="10" y="2970">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="2986">| test-report - buildApp - node - linux v6.14.2 - 2018-06-04T08:09:59.786Z</tspan>
+
+<tspan x="10" y="3002">|   26374 ms            0 failed        8 passed      |</tspan>
+
+<tspan x="10" y="3018">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="3034">| test-report - npmTest - browser - / - Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTM\</tspan>
+<tspan x="10" y="3050">L, like Gecko) Chrome/58.0.3029.110 Electron/1.7.15 Safari/537.36 - 2018-06-04T08:10:11.505Z</tspan>
+
+<tspan x="10" y="3066">|      42 ms            0 failed        8 passed      |</tspan>
+
+<tspan x="10" y="3082">-------------------------------------------------------</tspan>
+
+<tspan x="10" y="3098"></tspan>
+
+<tspan x="10" y="3114">created test-report file /home/travis/build/npmdoc/node-npmdoc-aws4/tmp/build/test-report.html</tspan>
+
+<tspan x="10" y="3130"></tspan>
+
+<tspan x="10" y="3146"></tspan>
+
+<tspan x="10" y="3162">npmTest - 0 failed tests</tspan>
+
+<tspan x="10" y="3178"></tspan>
+
+<tspan x="10" y="3194"></tspan>
+
+<tspan x="10" y="3210">[MODE_BUILD=npmTest] - 2018-06-04T08:10:27.714Z - EXIT_CODE - 0</tspan>
+
+</text>
+</svg>
