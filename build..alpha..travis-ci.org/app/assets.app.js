@@ -33033,7 +33033,7 @@ local.stateInit({
             "npm_package_homepage": "https://github.com/npmdoc/node-npmdoc-aws4",
             "npm_package_name": "npmdoc-aws4",
             "npm_package_nameLib": "npmdoc_aws4",
-            "npm_package_version": "2017.4.26"
+            "npm_package_version": "2018.6.4"
         }
     }
 });
